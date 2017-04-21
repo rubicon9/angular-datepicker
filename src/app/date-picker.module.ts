@@ -7,6 +7,7 @@ import {DomHelper} from './common/services/dom-appender/dom-appender.service';
 import {MonthCalendarComponent} from './month-calendar/month-calendar.component';
 import {UtilsService} from './common/services/utils/utils.service';
 import {CalendarNavComponent} from './calendar-nav/calendar-nav.component';
+import { CalendarsContainerComponent } from './calendars-container/calendars-container.component';
 export {DatePickerComponent} from './date-picker/date-picker.component'
 export {DayCalendarComponent} from './day-calendar/day-calendar.component';
 
@@ -19,7 +20,8 @@ export {DayCalendarComponent} from './day-calendar/day-calendar.component';
     DatePickerComponent,
     DayCalendarComponent,
     MonthCalendarComponent,
-    CalendarNavComponent
+    CalendarNavComponent,
+    CalendarsContainerComponent
   ],
   imports: [
     CommonModule,
