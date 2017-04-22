@@ -19,24 +19,25 @@
     <div class="dp-popup {{theme}}"
          [ngSwitch]="type"
          [hidden]="!_areCalendarsShown">
-      <dp-day-calendar #dayCalendar
-                       *ngSwitchCase="'day'"
-                       [config]="dayCalendarConfig"
-                       [ngModel]="_selected"
-                       [displayDate]="currentDateView"
-                       (onSelect)="dateSelected($event, 'day')"
-                       [theme]="theme">
-
-      </dp-day-calendar>
-
-      <dp-month-calendar #monthCalendar
-                         *ngSwitchCase="'month'"
+      <div *ngSwitchCase="'day'">
+        <dp-day-calendar #dayCalendar
                          [config]="dayCalendarConfig"
                          [ngModel]="_selected"
                          [displayDate]="currentDateView"
-                         (onSelect)="dateSelected($event, 'month')"
+                         (onSelect)="dateSelected($event, 'day')"
                          [theme]="theme">
-      </dp-month-calendar>
+        </dp-day-calendar>
+      </div>
+
+      <div *ngSwitchCase="'month'">
+        <dp-month-calendar #monthCalendar
+                           [config]="dayCalendarConfig"
+                           [ngModel]="_selected"
+                           [displayDate]="currentDateView"
+                           (onSelect)="dateSelected($event, 'month')"
+                           [theme]="theme">
+        </dp-month-calendar>
+      </div>
     </div>
   </div>
 </div>

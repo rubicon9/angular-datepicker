@@ -1,3 +1,19 @@
-<p>
-  calendars-container works!
-</p>
+<div *ngSwitchCase="'day'">
+  <dp-day-calendar #dayCalendar
+                   [config]="dayCalendarConfig"
+                   [ngModel]="_selected"
+                   [displayDate]="currentDateView"
+                   (onSelect)="dateSelected($event, 'day')"
+                   [theme]="theme">
+  </dp-day-calendar>
+</div>
+
+<div *ngSwitchCase="'month'">
+  <dp-month-calendar #monthCalendar
+                     [config]="dayCalendarConfig"
+                     [ngModel]="_selected"
+                     [displayDate]="currentDateView"
+                     (onSelect)="dateSelected($event, 'month')"
+                     [theme]="theme">
+  </dp-month-calendar>
+</div>
