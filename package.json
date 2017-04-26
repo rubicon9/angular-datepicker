@@ -30,7 +30,10 @@
     "ng-datepicker",
     "angular",
     "picker",
-    "angular-datepicker"
+    "angular-datepicker",
+    "ngx",
+    "monthpicker"
+    "month"
   ],
   "dependencies": {
     "moment": "^2.17.1"
