@@ -32,7 +32,7 @@
     "picker",
     "angular-datepicker",
     "ngx",
-    "monthpicker"
+    "monthpicker",
     "month"
   ],
   "dependencies": {

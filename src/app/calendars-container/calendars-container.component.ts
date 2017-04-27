@@ -1,12 +1,13 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {Validator} from 'codelyzer/walkerFactory/walkerFn';
-import {ControlValueAccessor, FormControl, ValidationErrors} from '@angular/forms';
-import {CalendarValue, ECalendarValue, SingleCalendarValue} from '../common/types/calendar-value';
+import {ControlValueAccessor, FormControl, ValidationErrors, Validator} from '@angular/forms';
+import {CalendarValue} from '../common/types/calendar-value';
 import {Moment} from 'moment';
 import {UtilsService} from '../common/services/utils/utils.service';
 import {IDayCalendarConfig} from '../day-calendar/day-calendar-config.model';
 import {IMonthCalendarConfig} from '../month-calendar/month-calendar-config';
 import {CalendarType} from '../common/types/calendar-type';
+import {SingleCalendarValue} from '../common/types/single-calendar-value';
+import {ECalendarValue} from '../common/types/calendar-value-enum';
 
 @Component({
   selector: 'dp-calendars-container',
@@ -15,8 +16,8 @@ import {CalendarType} from '../common/types/calendar-type';
   providers: [UtilsService]
 })
 export class CalendarsContainerComponent implements OnInit,
-                                                    ControlValueAccessor,
-                                                    Validator {
+                                                    Validator,
+                                                    ControlValueAccessor {
   @Input() config: IDayCalendarConfig | IMonthCalendarConfig;
   @Input() type: CalendarType = 'day';
   @Input() displayDate: SingleCalendarValue;
