@@ -22,7 +22,6 @@ import {
   NG_VALIDATORS,
   ControlValueAccessor,
   Validator,
-  ValidationErrors,
   FormControl
 } from '@angular/forms';
 import {CalendarValue} from '../common/types/calendar-value';
@@ -145,7 +144,7 @@ export class DayCalendarComponent implements OnInit, OnChanges, ControlValueAcce
   registerOnTouched(fn: any): void {
   }
 
-  validate(formControl: FormControl): ValidationErrors | any {
+  validate(formControl: FormControl): any {
     if (this.minDate || this.maxDate) {
       return this.validateFn(formControl.value);
     } else {
